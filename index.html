@@ -1,38 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incognito Pest Control</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="dist/navbar.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incognito Pest Control Services</title>
+  <style>
+    :root {
+      --bg: #f7f7f2; /* off‑white */
+      --card: #ffffff;
+      --green: #2e7d32; /* cleanliness green */
+      --green-light: #4caf50;
+      --text-dark: #1a1a1a;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header img.logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 15px auto 40px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* SERVICES GRID */
+    .services-section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .services-title {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      perspective: 1000px;
+    }
+
+    .service-inner {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      transition: transform 0.7s;
+      transform-style: preserve-3d;
+    }
+
+    .service-card:hover .service-inner {
+      transform: rotateY(180deg);
+    }
+
+    .service-front, .service-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px var(--shadow);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      background: var(--card);
+    }
+
+    .service-front {
+      border-left: 6px solid var(--green);
+    }
+
+    .service-back {
+      transform: rotateY(180deg);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-weight: bold;
+      padding: 0;
+    }
+
+    /* BUTTON */
+    .learn-more-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .learn-more {
+      padding: 12px 28px;
+      background: var(--green);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .learn-more:hover {
+      background: var(--green-light);
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: white;
+      margin: 60px auto 0;
+      padding: 30px;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px var(--shadow);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button.send-btn {
+      padding: 12px;
+      border: none;
+      background: var(--green);
+      color: white;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button.send-btn:hover {
+      background: var(--green-light);
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Incognito Pest Control</h1>
-    </header>
-    <main>
-        <section id="welcome" class="container mt-5">
-            <h2>Welcome to Incognito Pest Control</h2>
-            <p>Your reliable partner for all pest control needs. We ensure your home and business are pest-free using safe and effective methods.</p>
-        </section>
-        <section id="highlights" class="container mt-5">
-            <h2>Our Services</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Residential Pest Control</li>
-                <li class="list-group-item">Commercial Pest Control</li>
-                <li class="list-group-item">Termite Control</li>
-                <li class="list-group-item">Rodent Control</li>
-                <li class="list-group-item">Bed Bug Treatment</li>
-                <li class="list-group-item">General Pest Control</li>
-            </ul>
-            <a href="services.html" class="btn btn-primary mt-3">Learn More</a>
-        </section>
-    </main>
-    <footer class="bg-dark text-white text-center p-3 mt-5">
-        <p>&copy; 2024 Incognito Pest Control. All rights reserved.</p>
-    </footer>
-    <script src="../dist/index.js"></script>
+
+  <header>
+    <img src="incog_logo.png" alt="Company Logo" class="logo" />
+    <h1>A Low Profile But Enviable In Service</h1>
+    <p class="intro">Professional and reliable pest control services for homes and businesses. We specialize in safe, effective, and environment‑friendly pest solutions.</p>
+  </header>
+
+  <!-- SERVICES -->
+  <section class="services-section">
+    <div class="services-title">Our Services</div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-inner">
+          <div class="service-front">Residential Pest Control</div>
+          <div class="service-back" style="background-image: url('residential.jpg');"></div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-inner">
+          <div class="service-front">Commercial Pest Control</div>
+          <div class="service-back" style="background-image: url('commercial.jpg');"></div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-inner">
+          <div class="service-front">Rodent Control</div>
+          <div class="service-back" style="background-image: url('rodent.jpg');"></div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-inner">
+          <div class="service-front">Termite Control</div>
+          <div class="service-back" style="background-image: url('termite.jpg');"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEARN MORE BUTTON -->
+  <div class="learn-more-container">
+    <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+
+    <form action="mailto:yourbusiness@gmail.com" method="post" enctype="text/plain">
+      <div class="contact-grid">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <button class="send-btn" type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> 0912‑345‑6789</p>
+      <p><strong>Email:</strong> yourbusiness@gmail.com</p>
+      <p><strong>Location:</strong> 97C Pinpin St., Palma, Baguio City, Philippines</p>
+    </div>
+  </section>
+
 </body>
 </html>
