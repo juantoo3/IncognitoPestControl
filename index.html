@@ -99,13 +99,17 @@
     }
 
     .service-front {
-      border-left: 6px solid var(--green);
+      position: relative;
       background-size: cover;
       background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
       font-weight: bold;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-      position: relative;
+      border-left: 6px solid var(--green);
+      border-radius: 12px;
       overflow: hidden;
     }
 
@@ -113,14 +117,13 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45); /* lowered contrast for readability */
-      border-radius: 12px;
+      background: rgba(0,0,0,0.45); /* contrast dimming */
       z-index: 1;
     }
 
     .service-front span {
       position: relative;
-      z-index: 2;
+      z-index: 2; /* keeps text above overlay */
     }
 
     .service-back {
@@ -219,28 +222,28 @@
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Residential Pest Control</div>
+          <div class="service-front"><span>Residential Pest Control</span></div>
           <div class="service-back" style="background-image: url('residential.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Commercial Pest Control</div>
+          <div class="service-front"><span>Commercial Pest Control</span></div>
           <div class="service-back" style="background-image: url('commercial.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Rodent Control</div>
+          <div class="service-front"><span>Rodent Control</span></div>
           <div class="service-back" style="background-image: url('rodent.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Termite Control</div>
+          <div class="service-front"><span>Termite Control</span></div>
           <div class="service-back" style="background-image: url('termite.jpg');"></div>
         </div>
       </div>
