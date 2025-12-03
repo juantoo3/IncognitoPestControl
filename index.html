@@ -9,7 +9,7 @@
     :root {
       --bg: #f7f7f2; /* off-white */
       --card: #ffffff;
-      --green: #2e7d32; /* cleanliness green */
+      --green: #2e7d32;
       --green-light: #4caf50;
       --text-dark: #1a1a1a;
       --shadow: rgba(0, 0, 0, 0.1);
@@ -107,19 +107,21 @@
       font-weight: bold;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
       border-left: 6px solid var(--green);
+      padding: 0;
     }
 
     .service-front::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45); /* dark overlay for text contrast */
+      background: rgba(0,0,0,0.45);
       z-index: 1;
     }
 
     .service-front span {
       position: relative;
       z-index: 2;
+      font-size: 20px;
     }
 
     /* BACK CARD */
@@ -129,7 +131,7 @@
       background-position: center;
       color: white;
       font-weight: bold;
-      padding: 0;
+      padding: 0 !important;
     }
 
     /* ASSIGN FRONT BACKGROUND IMAGES */
@@ -225,7 +227,9 @@
   <header>
     <img src="incog_logo.jpg" alt="Company Logo" class="logo" />
     <h1>A Low Profile But Enviable In Service</h1>
-    <p class="intro">Professional and reliable pest control services for homes and businesses. We specialize in safe, effective, and environment-friendly pest solutions.</p>
+    <p class="intro">
+      Professional and reliable pest control services for homes and businesses. We specialize in safe, effective, and environment-friendly pest solutions.
+    </p>
   </header>
 
   <!-- SERVICES -->
@@ -265,7 +269,7 @@
     </div>
   </section>
 
-  <!-- LEARN MORE BUTTON -->
+  <!-- LEARN MORE -->
   <div class="learn-more-container">
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
