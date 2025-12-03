@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Incognito Pest Control Services</title>
+
   <style>
     :root {
-      --bg: #f7f7f2; /* off‑white */
+      --bg: #f7f7f2; /* off-white */
       --card: #ffffff;
       --green: #2e7d32; /* cleanliness green */
       --green-light: #4caf50;
@@ -89,19 +90,39 @@
       backface-visibility: hidden;
       border-radius: 12px;
       box-shadow: 0 4px 18px var(--shadow);
-      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-size: 18px;
-      background: var(--card);
     }
 
+    /* FRONT CARD — WITH BACKGROUND IMAGE + OVERLAY */
     .service-front {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      color: white;
+      font-weight: bold;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
       border-left: 6px solid var(--green);
     }
 
+    .service-front::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45); /* dark overlay for text contrast */
+      z-index: 1;
+    }
+
+    .service-front span {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BACK CARD */
     .service-back {
       transform: rotateY(180deg);
       background-size: cover;
@@ -109,6 +130,23 @@
       color: white;
       font-weight: bold;
       padding: 0;
+    }
+
+    /* ASSIGN FRONT BACKGROUND IMAGES */
+    .front-residential {
+      background-image: url('residential.jpg');
+    }
+
+    .front-commercial {
+      background-image: url('commercial.jpg');
+    }
+
+    .front-rodent {
+      background-image: url('rodent.jpg');
+    }
+
+    .front-termite {
+      background-image: url('termite.jpg');
     }
 
     /* BUTTON */
@@ -187,7 +225,7 @@
   <header>
     <img src="incog_logo.jpg" alt="Company Logo" class="logo" />
     <h1>A Low Profile But Enviable In Service</h1>
-    <p class="intro">Professional and reliable pest control services for homes and businesses. We specialize in safe, effective, and environment‑friendly pest solutions.</p>
+    <p class="intro">Professional and reliable pest control services for homes and businesses. We specialize in safe, effective, and environment-friendly pest solutions.</p>
   </header>
 
   <!-- SERVICES -->
@@ -198,28 +236,28 @@
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Residential Pest Control</div>
+          <div class="service-front front-residential"><span>Residential Pest Control</span></div>
           <div class="service-back" style="background-image: url('residential.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Commercial Pest Control</div>
+          <div class="service-front front-commercial"><span>Commercial Pest Control</span></div>
           <div class="service-back" style="background-image: url('commercial.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Rodent Control</div>
+          <div class="service-front front-rodent"><span>Rodent Control</span></div>
           <div class="service-back" style="background-image: url('rodent.jpg');"></div>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-inner">
-          <div class="service-front">Termite Control</div>
+          <div class="service-front front-termite"><span>Termite Control</span></div>
           <div class="service-back" style="background-image: url('termite.jpg');"></div>
         </div>
       </div>
@@ -246,7 +284,7 @@
     </form>
 
     <div class="contact-info">
-      <p><strong>Phone:</strong> 0912‑345‑6789</p>
+      <p><strong>Phone:</strong> 0912-345-6789</p>
       <p><strong>Email:</strong> yourbusiness@gmail.com</p>
       <p><strong>Location:</strong> 97C Pinpin St., Palma, Baguio City, Philippines</p>
     </div>
