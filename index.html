@@ -24,32 +24,34 @@
 
     header {
       width: 100%;
-      min-height: 320px;
+      height: 200px;
       background: #f7f7f2;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
+      padding-bottom: 20px;
       position: relative;
-      padding: 40px 20px 20px;
+      overflow: hidden;
     }
     
     header::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url("incog_banner.png") center/cover no-repeat;
-      opacity: 0.35;
+      background: url("incog_banner.png") center/contain no-repeat;
+      opacity: 0.25;
+      transform: scale(1.05);
       pointer-events: none;
     }
     
     header p {
       position: relative;
       z-index: 2;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
+      text-align: center;
     }
 
-    
     /* Mobile */
     @media (max-width: 600px) {
       header {
