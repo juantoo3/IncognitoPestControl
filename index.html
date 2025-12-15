@@ -24,9 +24,9 @@
 
     header {
       width: 100%;
-      height: 45vh;               
-      min-height: 280px;       
-      max-height: 420px;  
+      height: 45vh;              /* occupies top portion of screen */
+      min-height: 320px;
+      max-height: 480px;
       background: var(--bg);
       display: flex;
       align-items: center;
@@ -39,11 +39,11 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url("incog_banner.png") center / contain no-repeat;
+      background: url("incog_banner.png") center / cover no-repeat;
       opacity: 0.25;
       pointer-events: none;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
+
 
     
     header p {
@@ -57,14 +57,14 @@
     
     /* Mobile */
     @media (max-width: 600px) {
-      header {
+    header {
         height: 30vh;
-        min-height: 180px;
+        min-height: 220px;
       }
     
       header p {
         font-size: 18px;
-        padding: 0 10px;
+        padding: 0 12px;
       }
     }
 
