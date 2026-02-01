@@ -21,7 +21,39 @@
       color: var(--text-dark);
     }
 
-    /* HEADER */
+    /* =======================
+       FULL PAGE LOADER
+    ======================== */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    #loader img {
+      width: 140px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    #loader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+
+    /* =======================
+       HEADER
+    ======================== */
     header {
       width: 100%;
       height: 45vh;
@@ -60,7 +92,9 @@
       }
     }
 
-    /* SERVICES */
+    /* =======================
+       SERVICES
+    ======================== */
     .services-section {
       padding: 20px;
       max-width: 1200px;
@@ -100,7 +134,7 @@
       transform: translateY(-6px);
     }
 
-    /* OVERLAY */
+    /* Overlay */
     .service-overlay {
       position: absolute;
       inset: 0;
@@ -125,7 +159,7 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
-    /* Mobile: overlay always visible */
+    /* Mobile */
     @media (hover: none) {
       .service-overlay {
         opacity: 1;
@@ -133,24 +167,15 @@
       }
     }
 
-    /* BACKGROUND IMAGES */
-    .front-residential {
-      background-image: url('residential-front.png');
-    }
+    /* Background Images */
+    .front-residential { background-image: url('residential-front.png'); }
+    .front-commercial { background-image: url('commercial-front.png'); }
+    .front-rodent { background-image: url('rodent-front.png'); }
+    .front-termite { background-image: url('termite-front.png'); }
 
-    .front-commercial {
-      background-image: url('commercial-front.png');
-    }
-
-    .front-rodent {
-      background-image: url('rodent-front.png');
-    }
-
-    .front-termite {
-      background-image: url('termite-front.png');
-    }
-
-    /* BUTTON */
+    /* =======================
+       BUTTON
+    ======================== */
     .learn-more-container {
       text-align: center;
       margin-top: 40px;
@@ -170,7 +195,9 @@
       background: var(--green-light);
     }
 
-    /* CONTACT */
+    /* =======================
+       CONTACT
+    ======================== */
     .contact-section {
       background: white;
       margin: 60px auto 0;
@@ -222,11 +249,15 @@
 
 <body>
 
+  <!-- LOADER -->
+  <div id="loader">
+    <img src="incog_logo.png" alt="Incognito Pest Control Logo">
+  </div>
+
   <header>
     <p>A Low Profile But Enviable In Service</p>
   </header>
 
-  <!-- SERVICES -->
   <section class="services-section">
     <div class="services-title">Our Services</div>
 
@@ -234,45 +265,35 @@
 
       <a href="services/residential.html" class="service-link">
         <div class="service-card front-residential">
-          <div class="service-overlay">
-            <h3>Residential Pest Control</h3>
-          </div>
+          <div class="service-overlay"><h3>Residential Pest Control</h3></div>
         </div>
       </a>
 
       <a href="services/commercial.html" class="service-link">
         <div class="service-card front-commercial">
-          <div class="service-overlay">
-            <h3>Commercial Pest Control</h3>
-          </div>
+          <div class="service-overlay"><h3>Commercial Pest Control</h3></div>
         </div>
       </a>
 
       <a href="services/rodent.html" class="service-link">
         <div class="service-card front-rodent">
-          <div class="service-overlay">
-            <h3>Rodent Control</h3>
-          </div>
+          <div class="service-overlay"><h3>Rodent Control</h3></div>
         </div>
       </a>
 
       <a href="services/termite.html" class="service-link">
         <div class="service-card front-termite">
-          <div class="service-overlay">
-            <h3>Termite Control</h3>
-          </div>
+          <div class="service-overlay"><h3>Termite Control</h3></div>
         </div>
       </a>
 
     </div>
   </section>
 
-  <!-- LEARN MORE -->
   <div class="learn-more-container">
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
 
-  <!-- CONTACT -->
   <section class="contact-section">
     <h2>Contact Us</h2>
 
@@ -291,6 +312,14 @@
       <p><strong>Location:</strong> 97C Pinpin St., Palma, Baguio City, Philippines</p>
     </div>
   </section>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").classList.add("hide");
+      }, 500);
+    });
+  </script>
 
 </body>
 </html>
