@@ -161,6 +161,70 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
+    /* =======================
+   CLIENTS CAROUSEL
+    ======================= */
+    .clients-section {
+      margin: 80px auto 40px;
+      padding: 20px 0;
+      background: #ffffff;
+    }
+    
+    .clients-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    
+    .clients-carousel {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    
+    .clients-track {
+      display: flex;
+      width: max-content;
+      animation: scrollClients 30s linear infinite;
+    }
+    
+    .clients-track img {
+      height: 80px;
+      margin: 0 40px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .clients-track img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    
+    /* Pause animation on hover */
+    .clients-carousel:hover .clients-track {
+      animation-play-state: paused;
+    }
+    
+    @keyframes scrollClients {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+    
+    /* Mobile */
+    @media (max-width: 600px) {
+      .clients-track img {
+        height: 55px;
+        margin: 0 20px;
+      }
+    }
+
+    
     /* Mobile */
     @media (hover: none) {
       .service-overlay {
@@ -256,10 +320,12 @@
     <img src="incog_logo.png" alt="Incognito Pest Control Logo">
   </div>
 
+   <!-- HEADER -->
   <header>
     <p>A Low Profile But Enviable In Service</p>
   </header>
 
+   <!-- SERVICES -->
   <section class="services-section">
     <div class="services-title">Our Services</div>
 
@@ -292,6 +358,32 @@
     </div>
   </section>
 
+  <!-- CLIENTS -->
+  <section class="clients-section">
+  <h2 class="clients-title">Our Clients</h2>
+
+  <div class="clients-carousel">
+    <div class="clients-track">
+
+      <!-- Duplicate logos for seamless loop -->
+      <img src="clients/client1.png" alt="Client 1">
+      <img src="clients/client2.png" alt="Client 2">
+      <img src="clients/client3.png" alt="Client 3">
+      <img src="clients/client4.png" alt="Client 4">
+      <img src="clients/client5.png" alt="Client 5">
+
+      <!-- duplicated -->
+      <img src="clients/client1.png" alt="Client 1">
+      <img src="clients/client2.png" alt="Client 2">
+      <img src="clients/client3.png" alt="Client 3">
+      <img src="clients/client4.png" alt="Client 4">
+      <img src="clients/client5.png" alt="Client 5">
+
+    </div>
+  </div>
+  </section>
+
+  
   <div class="learn-more-container">
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
