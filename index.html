@@ -72,8 +72,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url("incog_banner.png") center / cover no-repeat;
-      opacity: 0.25;
+      background: url("banner.svg") center / cover no-repeat;
     }
 
     header p {
@@ -222,10 +221,15 @@
         height: 55px;
         margin: 0 20px;
       }
+      .fluid-bg::before {
+        opacity: 0.18;
+      }
+    
+      header::before {
+        opacity: 0.25;
+      }
     }
 
-    
-    /* Mobile */
     @media (hover: none) {
       .service-overlay {
         opacity: 1;
@@ -310,6 +314,39 @@
       text-align: center;
       font-size: 16px;
     }
+
+     /* FLUID BACKGROUND BASE */
+    .fluid-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .fluid-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.28;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .fluid-bg > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* INDIVIDUAL FLUIDS */
+    .fluid-services::before {
+      background-image: url("body.svg");
+    }
+    
+    .fluid-contact::before {
+      background-image: url("footer.svg");
+    }
+
   </style>
 </head>
 
@@ -326,7 +363,7 @@
   </header>
 
    <!-- SERVICES -->
-  <section class="services-section">
+  <section class="services-section fluid-bg fluid-services">
     <div class="services-title">Our Services</div>
 
     <div class="services-grid">
@@ -388,7 +425,7 @@
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
 
-  <section class="contact-section">
+  <section class="contact-section fluid-bg fluid-contact">
     <h2>Contact Us</h2>
 
     <form action="mailto:yourbusiness@gmail.com" method="post" enctype="text/plain">
