@@ -53,9 +53,30 @@
       100% { transform: scale(1); opacity: 0.7; }
     }
 
+    /* GLOBAL FLUID BACKGROUND */
+    .global-fluid-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: url("master-bg.svg") center / cover no-repeat;
+      transform: translateZ(0);
+    }
+    
+    /* Ensure page content is above background */
+    body {
+      position: relative;
+      background: transparent;
+    }
+
+
     /* =======================
        HEADER
     ======================== */
+    .site-logo {
+      width: 160px;
+      margin-bottom: 16px;
+    }
+
     header {
       width: 100%;
       height: 45vh;
@@ -65,19 +86,9 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("banner.svg") center / cover no-repeat;
     }
 
     header p {
-      position: relative;
-      z-index: 2;
       font-size: 22px;
       font-weight: bold;
       text-align: center;
@@ -315,38 +326,6 @@
       font-size: 16px;
     }
 
-     /* FLUID BACKGROUND BASE */
-    .fluid-bg {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .fluid-bg::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      opacity: 0.28;
-      pointer-events: none;
-      z-index: 0;
-    }
-    
-    .fluid-bg > * {
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* INDIVIDUAL FLUIDS */
-    .fluid-services::before {
-      background-image: url("body.svg");
-    }
-    
-    .fluid-contact::before {
-      background-image: url("footer.svg");
-    }
-
   </style>
 </head>
 
@@ -357,13 +336,17 @@
     <img src="incog_logo.png" alt="Incognito Pest Control Logo">
   </div>
 
+  <!-- Background -->
+  <div class="global-fluid-bg"></div>
+  
    <!-- HEADER -->
   <header>
+      <img src="incog_logo.png" alt="Incognito Pest Control" class="site-logo">
     <p>A Low Profile But Enviable In Service</p>
   </header>
 
    <!-- SERVICES -->
-  <section class="services-section fluid-bg fluid-services">
+  <section class="services-section">
     <div class="services-title">Our Services</div>
 
     <div class="services-grid">
@@ -397,7 +380,7 @@
 
   <!-- CLIENTS -->
   <section class="clients-section">
-  <h2 class="clients-title">Our Clients</h2>
+  <h2 class="clients-title">Our Awards and Certifications</h2>
 
   <div class="clients-carousel">
     <div class="clients-track">
@@ -425,7 +408,7 @@
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
 
-  <section class="contact-section fluid-bg fluid-contact">
+  <section class="contact-section">
     <h2>Contact Us</h2>
 
     <form action="mailto:yourbusiness@gmail.com" method="post" enctype="text/plain">
@@ -474,6 +457,13 @@
       }, 300);
     });
   });
+
+    window.addEventListener("scroll", () => {
+    const bg = document.querySelector(".global-fluid-bg");
+    const y = window.scrollY * 0.15;
+    bg.style.transform = `translateY(${y}px)`;
+  });
+    
   </script>
 
 
