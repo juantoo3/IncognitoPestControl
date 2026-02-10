@@ -261,7 +261,7 @@
 
     .learn-more {
       padding: 12px 28px;
-      background: var(--blue);
+      background: var(--primary);
       color: white;
       border-radius: 8px;
       text-decoration: none;
@@ -270,7 +270,7 @@
     }
 
     .learn-more:hover {
-      background: var(--blue-light);
+      background: var(--primary-light);
     }
 
     /* =======================
