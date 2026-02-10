@@ -1,10 +1,11 @@
  :root {
-      --bg: #f7f7f2;
-      --green: #76d3f6;
-      --green-light: #0a588e;
-      --text-dark: #1a1a1a;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
+   --bg: #f7f7f2;
+   --primary: #0f2a44;        /* dark blue */
+   --primary-light: #1f4f7a;  /* hover blue */
+   --text-dark: #1a1a1a;
+   --shadow: rgba(0, 0, 0, 0.1);
+   --overlay-color: rgba(15, 42, 68, 0.75);
+ }
     
     html, body {
       min-height: 100%;
