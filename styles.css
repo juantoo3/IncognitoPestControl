@@ -147,7 +147,7 @@
     .service-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(30, 80, 180, 0.75);
+      background: var(--overlay-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -166,6 +166,79 @@
       font-size: 22px;
       font-weight: bold;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    /* =======================
+       SERVICE PAGE HERO
+    ======================= */
+    .service-hero {
+      text-align: center;
+      padding: 90px 20px 50px;
+    }
+    
+    .service-hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    
+    .service-subtitle {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    /* =======================
+       SERVICE CONTENT CARD
+    ======================= */
+    .service-content {
+      max-width: 750px;
+      margin: 0 auto 90px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    
+    .service-description {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    
+    /* Image */
+    .service-image {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto 30px;
+      display: block;
+      border-radius: 12px;
+    }
+    
+    /* List */
+    .service-list {
+      text-align: left;
+      max-width: 420px;
+      margin: 0 auto 35px;
+      padding-left: 20px;
+    }
+    
+    .service-list li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+   
+    /* Mobile */
+    @media (max-width: 600px) {
+      .service-hero h1 {
+        font-size: 32px;
+      }
+    
+      .service-content {
+        padding: 28px 22px;
+      }
     }
 
     /* =======================
@@ -242,19 +315,6 @@
     .service-card:hover .service-overlay {
       opacity: 1;
     }
-
-    .service-card {
-      position: relative;
-      height: 530px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 18px var(--shadow);
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
 
     /* Background Images */
     .front-residential { background-image: url('assets/residential2.png'); }
