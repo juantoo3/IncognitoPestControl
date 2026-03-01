@@ -16,8 +16,6 @@
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text-dark);
-      
-      /* Ensure page content is above background */
       position: relative;
       background: transparent;
       
@@ -102,20 +100,34 @@
       position: relative;
     }
 
-    header p {
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-    }
-
+    /* =======================
+       MOBILE
+    ======================== */
     @media (max-width: 600px) {
-      header {
-        height: 30vh;
+      .header-hero h1 {
+        font-size: 32px;
       }
-      header p {
-        font-size: 18px;
-        padding: 0 12px;
+     
+      .service-hero h1 {
+        font-size: 32px;
       }
+    
+      .service-content {
+        padding: 28px 22px;
+      }
+
+      .clients-track img {
+        height: 55px;
+        margin: 0 20px;
+      }
+      .fluid-bg::before {
+        opacity: 0.18;
+      }
+    
+      header::before {
+        opacity: 0.25;
+      }
+     
     }
 
     /* =======================
@@ -186,7 +198,7 @@
     }
 
     /* =======================
-       SERVICE PAGE HERO
+       SERVICE PAGES
     ======================= */
     .service-hero {
       text-align: center;
@@ -205,7 +217,7 @@
     }
     
     /* =======================
-       SERVICE CONTENT CARD
+       SERVICE PAGES- CONTENT CARD
     ======================= */
     .service-content {
       max-width: 750px;
@@ -247,16 +259,7 @@
     }
     
    
-    /* Mobile */
-    @media (max-width: 600px) {
-      .service-hero h1 {
-        font-size: 32px;
-      }
     
-      .service-content {
-        padding: 28px 22px;
-      }
-    }
 
     /* =======================
    CLIENTS CAROUSEL
@@ -310,21 +313,6 @@
       }
       to {
         transform: translateX(-50%);
-      }
-    }
-    
-    /* Mobile */
-    @media (max-width: 600px) {
-      .clients-track img {
-        height: 55px;
-        margin: 0 20px;
-      }
-      .fluid-bg::before {
-        opacity: 0.18;
-      }
-    
-      header::before {
-        opacity: 0.25;
       }
     }
 
