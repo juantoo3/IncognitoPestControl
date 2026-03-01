@@ -80,6 +80,7 @@
       min-height: 270px;
       max-height: 430px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
