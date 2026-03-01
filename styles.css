@@ -7,16 +7,14 @@
    --overlay-color: rgba(15, 42, 68, 0.75);
  }
 
-* {
-  outline: 1px solid red;
-}
-
     html {
     scroll-behavior: smooth;
     }
     
     html, body {
       min-height: 100%;
+      width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -67,8 +65,8 @@
       position: fixed;
       inset: 0;
       z-index: -1;
-      background: url("assets/master-bg.svg") center / cover no-repeat;
-      transform: translateZ(0);
+      background: url("assets/master-bg.svg") center / 100% no-repeat;
+      overflow: hidden;
     }
 
 
@@ -308,14 +306,14 @@
     }
     
     .clients-carousel {
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
       width: 100%;
     }
     
     .clients-track {
       display: flex;
-      width: max-content;
+      max-width: 100%;
       animation: scrollClients 30s linear infinite;
     }
     
