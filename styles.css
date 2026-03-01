@@ -79,10 +79,15 @@
       padding: 90px 20px 50px;
     }
     
-    .header-hero p {
+    .header-hero h1 {
       font-size: 42px;
       font-weight: 800;
       margin-bottom: 10px;
+    }
+    
+    .header-subtitle {
+      font-size: 18px;
+      color: #333;
     }
 
     header {
