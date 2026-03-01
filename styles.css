@@ -6,6 +6,10 @@
    --shadow: rgba(0, 0, 0, 0.1);
    --overlay-color: rgba(15, 42, 68, 0.75);
  }
+
+    html {
+    scroll-behavior: smooth;
+    }
     
     html, body {
       min-height: 100%;
@@ -101,6 +105,24 @@
       position: relative;
     }
 
+    .cta-btn {
+      margin-top: 20px;
+      padding: 14px 34px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    
+    .cta-btn:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
     /* =======================
        MOBILE
     ======================== */
@@ -128,7 +150,10 @@
       header::before {
         opacity: 0.25;
       }
-     
+
+     .contact-wrapper {
+       grid-template-columns: 1fr;
+     }
     }
 
     /* =======================
@@ -399,6 +424,28 @@
       text-align: center;
       font-size: 16px;
     }
+
+    .contact-wrapper {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 30px;
+       margin-top: 30px;
+     }
+     
+     .contact-info-box {
+       font-size: 16px;
+       line-height: 1.7;
+     }
+     
+     .contact-info-box p {
+       margin-bottom: 16px;
+     }
+     
+     /* Form */
+     .contact-form {
+       display: grid;
+       gap: 14px;
+     }
 
     .back-btn {
       display: inline-block;
