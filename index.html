@@ -89,22 +89,24 @@
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
 
-  <section class="contact-section">
+  <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
 
-    <form action="mailto:incognitoindustrial@gmail.com" method="post" enctype="text/plain">
-      <div class="contact-grid">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      </div>
-      <button class="send-btn" type="submit">Send Message</button>
-    </form>
+    <div class="contact-wrapper">
 
-    <div class="contact-info">
-      <p><strong>Phone:</strong> Smart: 0919 000 7798 | Globe: 0917 301 6901 | Landline: (074) 620 5391</p>
-      <p><strong>Email:</strong> incognitoindustrial@gmail.com</p>
-      <p><strong>Location:</strong> 97C Pinpin St., Palma, Baguio City, Philippines</p>
+      <div class="contact-info-box">
+        <p><strong>📍 Address</strong><br> 97C Pinpin St., Palma, Baguio City, Philippines</p>
+        <p><strong>📞 Phone</strong><br> Smart: 0919 000 7798 | Globe: 0917 301 6901 | Landline: (074) 620 5391</p>
+        <p><strong>📧 Email</strong><br> incognitoindustrial@gmail.com</p>
+      </div>
+      
+      <form class="contact-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+      
     </div>
   </section>
 
