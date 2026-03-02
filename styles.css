@@ -470,3 +470,44 @@
     .back-btn:hover {
       background: var(--primary-light);
     }
+
+    /* =======================
+        SCROLL ANIMATIONS
+     ======================= */
+     
+     /* Initial hidden state */
+     .animate {
+       opacity: 0;
+       transform: translateY(30px);
+       transition: opacity 0.8s ease, transform 0.8s ease;
+     }
+     
+     /* When visible */
+     .animate.is-visible {
+       opacity: 1;
+       transform: translateY(0);
+     }
+     
+     /* Slide from left */
+     .animate-left {
+       transform: translateX(-40px);
+     }
+
+     /* Slide from right */
+     .animate-right {
+       transform: translateX(40px);
+     }
+
+      /* Pop */
+     .animate-scale {
+       transform: scale(0.9);
+     }
+     
+     .animate.is-visible.animate-left,
+     .animate.is-visible.animate-right {
+       transform: translateX(0);
+     }
+     
+     .animate.is-visible.animate-scale {
+       transform: scale(1);
+     }
