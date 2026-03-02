@@ -104,10 +104,22 @@
         <p><strong>📧 Email</strong><br> incognitoindustrial@gmail.com</p>
       </div>
       
-      <form class="contact-form" action="https://formspree.io/f/mykdqgyb" method="POST">  <!-- Formspree -->
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea rows="4" placeholder="'I would like to get a quote'" required></textarea>
+      <form 
+        class="contact-form" 
+        action="https://formspree.io/f/mykdqgyb" 
+        method="POST"
+        >  <!-- Formspree -->
+        
+        <label> Your Name:
+          <input type="text" name="name" placeholder="Full Name" required>
+        </label>
+        <label>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </label>
+        <label>
+          <textarea name="message" rows="4" placeholder="'I would like to get a quote'" required></textarea>
+        </label>
+        
         <button type="submit" class="send-btn">Send Message</button>
       </form>
       
