@@ -130,33 +130,38 @@
        MOBILE
     ======================== */
     @media (max-width: 600px) {
-      .header-hero h1 {
-        font-size: 32px;
-      }
+        .header-hero h1 {
+          font-size: 32px;
+        }
+       
+        .service-hero h1 {
+          font-size: 32px;
+        }
+      
+        .service-content {
+          padding: 28px 22px;
+        }
+  
+        .clients-track img {
+          height: 55px;
+          margin: 0 20px;
+        }
+        .fluid-bg::before {
+          opacity: 0.18;
+        }
+      
+        header::before {
+          opacity: 0.25;
+        }
+  
+       .contact-wrapper {
+         grid-template-columns: 1fr;
+       }
+  
+       .clients-track {
+         animation: scrollClients 15s linear infinite;
+       }
      
-      .service-hero h1 {
-        font-size: 32px;
-      }
-    
-      .service-content {
-        padding: 28px 22px;
-      }
-
-      .clients-track img {
-        height: 55px;
-        margin: 0 20px;
-      }
-      .fluid-bg::before {
-        opacity: 0.18;
-      }
-    
-      header::before {
-        opacity: 0.25;
-      }
-
-     .contact-wrapper {
-       grid-template-columns: 1fr;
-     }
     }
 
     /* =======================
@@ -315,12 +320,12 @@
     
     .clients-track {
       display: flex;
-      max-width: 100%;
+      width: max-content;
       animation: scrollClients 30s linear infinite;
     }
     
     .clients-track img {
-      height: 180px;
+      height: 230px;
       margin: 0 40px;
       filter: grayscale(25%);
       opacity: 1;
