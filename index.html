@@ -21,9 +21,9 @@
    <!-- HEADER -->
   <header class="header-hero">
     <img src="assets/incog_logo.png" alt="Incognito Pest Control" class="site-logo">
-    <h1 class="animate">Incognito Pest Control Services</h1>
-    <p class="header-subtitle animate">A Low Profile But Enviable In Service</p>
-    <a class="header-subtitle animate cta-btn" href="#contact">Get a FREE Quote</a>
+    <h1>Incognito Pest Control Services</h1>
+    <p class="header-subtitle">A Low Profile But Enviable In Service</p>
+    <a class="cta-btn" href="#contact">Get a FREE Quote</a>
   </header>
 
    <!-- SERVICES -->
@@ -33,25 +33,25 @@
     <div class="services-grid">
 
       <a href="services/residential.html" class="service-link">
-        <div class="service-card front-residential animate animate-left" tabindex="0">
+        <div class="service-card front-residential" tabindex="0">
           <div class="service-overlay"><h3>Residential Pest Control</h3></div>
         </div>
       </a>
 
       <a href="services/commercial.html" class="service-link">
-        <div class="service-card front-commercial animate animate-left" tabindex="0">
+        <div class="service-card front-commercial" tabindex="0">
           <div class="service-overlay"><h3>Commercial Pest Control</h3></div>
         </div>
       </a>
 
       <a href="services/rodent.html" class="service-link">
-        <div class="service-card front-rodent animate animate-right" tabindex="0">
+        <div class="service-card front-rodent" tabindex="0">
           <div class="service-overlay"><h3>Rodent Control</h3></div>
         </div>
       </a>
 
       <a href="services/termite.html" class="service-link">
-        <div class="service-card front-termite animate animate-right" tabindex="0">
+        <div class="service-card front-termite" tabindex="0">
           <div class="service-overlay"><h3>Termite Control</h3></div>
         </div>
       </a>
@@ -93,7 +93,7 @@
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
 
-  <section id="contact" class="contact-section animate">
+  <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
 
     <div class="contact-wrapper">
@@ -143,31 +143,6 @@
         window.location.href = url;
       }, 300);
     });
-  });
-
-    // scrolling
-    window.addEventListener("scroll", () => {
-    const bg = document.querySelector(".global-fluid-bg");
-    const y = window.scrollY * 0.15;
-    bg.style.transform = `translateY(${y}px)`;
-  });
-
-
-    const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
-
-  document.querySelectorAll(".animate").forEach(el => {
-    observer.observe(el);
   });
     
   </script>
