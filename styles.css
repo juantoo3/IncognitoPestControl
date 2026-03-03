@@ -26,7 +26,12 @@
       background: transparent;
       
     }
-    
+
+     img, svg {
+       max-width: 100%;
+       height: auto;
+       display: block;
+     }
 
     /* =======================
        FULL PAGE LOADER
@@ -62,14 +67,12 @@
 
     /* GLOBAL FLUID BACKGROUND */
     .global-fluid-bg {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background: url("assets/master-bg.svg") center / cover no-repeat;
-      overflow: hidden;
-    }
+       position: fixed;
+       inset: 0;
+       z-index: -1;
+       background: url("assets/master-bg.svg") center / cover no-repeat;
+       pointer-events: none;
+     }
 
 
     /* =======================
@@ -315,18 +318,17 @@
     }
     
     .clients-carousel {
-      overflow-x: hidden;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
-    
-    .clients-track {
-      display: flex;
-      box-sizing: border-box;
-      will-change: transform;
-      animation: scrollClients 30s linear infinite;
-    }
+       width: 100%;
+       overflow: hidden;
+       position: relative;
+     }
+     
+     .clients-track {
+       display: flex;
+       width: max-content;
+       will-change: transform;
+       animation: scrollClients 30s linear infinite;
+     }
     
     .clients-track img {
       height: 230px;
