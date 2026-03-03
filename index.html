@@ -128,19 +128,23 @@
   <script>
   const loader = document.getElementById("loader");
 
-  // Hide loader when page fully loads
+  // Hide loader normally
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      loader.classList.add("hide");
-    }, 400);
+    setTimeout(() => loader.classList.add("hide"), 300);
   });
 
-  // Show loader on internal link click
+  // Fix browser back/forward cache
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      loader.classList.add("hide");
+    }
+  });
+
+  // Show loader only for internal navigation clicks
   document.querySelectorAll("a[href]").forEach(link => {
     link.addEventListener("click", e => {
       const url = link.getAttribute("href");
 
-      // Ignore external links, anchors, new tabs
       if (
         url.startsWith("http") ||
         url.startsWith("#") ||
