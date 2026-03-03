@@ -64,8 +64,10 @@
     .global-fluid-bg {
       position: fixed;
       inset: 0;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
-      background: url("assets/master-bg.svg") center / 100% no-repeat;
+      background: url("assets/master-bg.svg") center / cover no-repeat;
       overflow: hidden;
     }
 
