@@ -316,22 +316,24 @@
     
     .clients-carousel {
       overflow-x: hidden;
+      overflow: hidden;
       position: relative;
       width: 100%;
     }
     
     .clients-track {
       display: flex;
-      overflow: hidden;
-      width: 100%;
+      box-sizing: border-box;
+      will-change: transform;
       animation: scrollClients 30s linear infinite;
     }
     
     .clients-track img {
       height: 230px;
       margin: 0 40px;
+      flex-shrink: 0; /* VERY IMPORTANT */
+      object-fit: contain;
       filter: grayscale(25%);
-      opacity: 1;
       transition: filter 0.3s ease, opacity 0.3s ease;
     }
     
