@@ -173,6 +173,13 @@
     /* =======================
        SERVICES
     ======================== */
+
+    .ipm-img {
+      width: 200px;
+      margin-bottom: 10px;
+      align: center;
+    }
+
     .services-section {
       padding: 20px;
       max-width: 1200px;
