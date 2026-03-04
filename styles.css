@@ -188,6 +188,13 @@
        SERVICES
     ======================== */
 
+    .highlight{
+      background: rgba(15, 42, 68, 0.12); /* light blue highlight */
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
     .ipm-img {
        width: 100%;
        max-width: 420px;
