@@ -126,7 +126,12 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       transition: background 0.3s ease, transform 0.2s ease;
     }
-    
+
+    .service-content .cta-btn {
+      display: inline-block;
+      margin-top: 40px;
+    }
+
     .cta-btn:hover {
       background: var(--primary-light);
       transform: translateY(-2px);
@@ -147,7 +152,16 @@
         .service-content {
           padding: 28px 22px;
         }
-  
+
+        .ipm-img {
+          max-width: 320px;
+          margin: 24px auto;
+        }
+      
+        .service-content .cta-btn {
+          margin-top: 32px;
+        }
+     
         .clients-track img {
           height: 55px;
           margin: 0 20px;
@@ -175,10 +189,12 @@
     ======================== */
 
     .ipm-img {
-      width: 200px;
-      margin: 0 auto 10px auto;
-      display: block;
-    }
+       width: 100%;
+       max-width: 420px;
+       margin: 30px auto;     
+       display: block;
+       border-radius: 12px;
+     }
 
     .services-section {
       padding: 20px;
