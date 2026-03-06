@@ -184,6 +184,7 @@
 
        .benefits{
          grid-template-columns: repeat(2, 1fr);
+         gap:20px;
        }
      
     }
@@ -333,6 +334,10 @@
       align-items:center;
       text-align:center;
       padding:15px;
+      background: rgba(255,255,255,0.6);
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.05);
     }
 
     .benefit-item img{
