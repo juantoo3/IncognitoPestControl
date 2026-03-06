@@ -315,18 +315,23 @@
       border-radius: 12px;
     }
     
-    /* List */
-    .service-list {
-      text-align: left;
-      max-width: 420px;
-      margin: 0 auto 35px;
-      padding-left: 20px;
-    }
-    
-    .service-list li {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
+    /* benefits */
+    .benefits{
+       display:grid;
+       grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+       gap:25px;
+       margin:40px 0;
+       text-align:center;
+     }
+     
+     .benefit-item img{
+       width:60px;
+       margin-bottom:10px;
+     }
+     
+     .benefit-item h4{
+       margin-bottom:6px;
+     }
     
    
     
