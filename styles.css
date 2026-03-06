@@ -183,7 +183,10 @@
        }
 
        .benefits{
-         grid-template-columns: repeat(2, 1fr);
+         display:grid;
+         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+         gap:25px;
+         margin:40px 0;
        }
      
     }
@@ -326,11 +329,18 @@
       gap:25px;
       margin:40px 0;
     }
-    
+
+    .benefit-item{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:15px;
+    }
+
     .benefit-item img{
       width:60px;
-      margin-bottom:10px;
-      display:block;
+      margin:0 auto 10px auto;
     }
     
     .benefit-item h4{
