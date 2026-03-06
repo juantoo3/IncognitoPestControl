@@ -181,7 +181,11 @@
        .clients-track {
          animation: scrollClients 15s linear infinite;
        }
-   
+
+       .benefits{
+         grid-template-columns: repeat(2, 1fr);
+       }
+     
     }
 
     /* =======================
@@ -317,21 +321,21 @@
     
     /* benefits */
     .benefits{
-       display:grid;
-       grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-       gap:25px;
-       margin:40px 0;
-       text-align:center;
-     }
-     
-     .benefit-item img{
-       width:60px;
-       margin-bottom:10px;
-     }
-     
-     .benefit-item h4{
-       margin-bottom:6px;
-     }
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:25px;
+      margin:40px 0;
+    }
+    
+    .benefit-item img{
+      width:60px;
+      margin-bottom:10px;
+      display:block;
+    }
+    
+    .benefit-item h4{
+      margin-bottom:6px;
+    }
     
    
     
