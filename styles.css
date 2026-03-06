@@ -322,11 +322,12 @@
     
     /* benefits */
     .benefits{
-      display:grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap:25px;
-      margin:40px 0;
-    }
+       display:grid;
+       grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+       gap:25px;
+       margin:40px 0;
+       text-align:center;
+     }
 
     .benefit-item{
       display:flex;
