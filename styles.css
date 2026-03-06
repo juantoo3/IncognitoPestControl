@@ -181,11 +181,6 @@
        .clients-track {
          animation: scrollClients 15s linear infinite;
        }
-
-       .benefits{
-         grid-template-columns: repeat(2, 1fr);
-         gap:20px;
-       }
      
     }
 
