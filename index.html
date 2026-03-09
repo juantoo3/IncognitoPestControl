@@ -202,7 +202,24 @@
     fetch("/components/navbar.html")
   .then(response => response.text())
   .then(data => {
+
     document.getElementById("navbar-placeholder").innerHTML = data;
+
+    const nav = document.getElementById("mainNav");
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+
+      const headerBottom = header.offsetHeight;
+
+      if (window.scrollY > headerBottom) {
+        nav.classList.add("show");
+      } else {
+        nav.classList.remove("show");
+      }
+
+    });
+
   });
   </script>
 </body>
