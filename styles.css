@@ -335,6 +335,11 @@
      gap:40px;
      margin:60px 0;
      flex-wrap:wrap;
+
+     max-width:1100px;
+
+    padding-left:30px;
+    padding-right:30px;
     }
 
     .service-text{
