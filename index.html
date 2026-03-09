@@ -234,9 +234,9 @@
     
     window.addEventListener("scroll", () => {
     
-      const headerBottom = header.getBoundingClientRect().bottom;
+      const trigger = header.offsetHeight;
     
-      if (headerBottom <= 0) {
+      if (window.scrollY > trigger) {
         nav.classList.add("show");
       } else {
         nav.classList.remove("show");
