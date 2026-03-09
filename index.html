@@ -199,28 +199,34 @@
   });
 
     //navigation
-    fetch("/components/navbar.html")
-  .then(response => response.text())
-  .then(data => {
+    fetch("./components/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      
+        initNavbar();
+      });
+      
+      function initNavbar(){
+      
+        const nav = document.getElementById("mainNav");
+        const header = document.querySelector("header");
+      
+        if(!nav || !header) return;
+      
+        window.addEventListener("scroll", () => {
+      
+          const triggerPoint = header.offsetHeight;
+      
+          if(window.scrollY > triggerPoint){
+            nav.classList.add("show");
+          }else{
+            nav.classList.remove("show");
+          }
+      
+        });
 
-    document.getElementById("navbar-placeholder").innerHTML = data;
-
-    const nav = document.getElementById("mainNav");
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", () => {
-
-      const headerBottom = header.offsetHeight;
-
-      if (window.scrollY > headerBottom) {
-        nav.classList.add("show");
-      } else {
-        nav.classList.remove("show");
       }
-
-    });
-
-  });
   </script>
 </body>
 </html>
