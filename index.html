@@ -20,6 +20,9 @@
   <!-- Background -->
   <div class="global-fluid-bg"></div>
   
+  <!-- Navigation -->
+  <div id="navbar-placeholder"></div>
+  
    <!-- HEADER -->
   <header class="header-hero">
     <img src="assets/incog_logo.png" alt="Incognito Pest Control" class="site-logo">
@@ -160,8 +163,7 @@
   <div class="learn-more-container">
     <a href="https://web.facebook.com/profile.php?id=61556409520594" target="_blank" class="learn-more">Learn More</a>
   </div>
-
-  <script>
+<script>
   const loader = document.getElementById("loader");
 
   // Hide loader normally
@@ -195,9 +197,13 @@
       }, 300);
     });
   });
-    
+
+    //navigation
+    fetch("/components/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-placeholder").innerHTML = data;
+  });
   </script>
-
-
 </body>
 </html>
