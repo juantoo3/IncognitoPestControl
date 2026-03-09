@@ -29,7 +29,12 @@
         <img src="assets/incog_logo.png" alt="Incognito Pest Control">
       </a>
   
-      <ul class="nav-links">
+      <!-- Mobile Menu Button -->
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+  
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
   
         <li class="dropdown">
@@ -225,19 +230,28 @@
 
     //navigation
     const nav = document.getElementById("mainNav");
-    const header = document.querySelector("header");
-    
+    const header = document.querySelector(".header-hero");
+  
     window.addEventListener("scroll", () => {
     
-      const headerBottom = header.offsetHeight;
+      const triggerPoint = header.offsetTop + header.offsetHeight - 80;
     
-      if(window.scrollY > headerBottom){
+      if (window.scrollY > triggerPoint) {
         nav.classList.add("show");
       } else {
         nav.classList.remove("show");
       }
     
     });
+
+    //mobile nav
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show-menu");
+    });  
+  
   </script>
 </body>
 </html>
