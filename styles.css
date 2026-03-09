@@ -355,6 +355,10 @@
       border-radius: 12px;
       flex: 1;
     }
+
+    .service-section:nth-child(even){
+    flex-direction:row-reverse;
+    }
     
     /* benefits */
     .benefits{
