@@ -231,12 +231,12 @@
     //navigation
     const nav = document.getElementById("mainNav");
     const header = document.querySelector(".header-hero");
-  
+    
     window.addEventListener("scroll", () => {
     
-      const triggerPoint = header.offsetTop + header.offsetHeight - 80;
+      const headerBottom = header.getBoundingClientRect().bottom;
     
-      if (window.scrollY > triggerPoint) {
+      if (headerBottom <= 0) {
         nav.classList.add("show");
       } else {
         nav.classList.remove("show");
