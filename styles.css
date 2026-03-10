@@ -344,6 +344,11 @@
          position:static;
          box-shadow:none;
         }
+
+        .accreditation-logos {
+           flex-direction: column;
+           gap: 15px;
+        }
      
     }
 
@@ -715,4 +720,37 @@
 
     .back-btn:hover {
       background: var(--primary-light);
+    }
+
+    footer {
+      background-color: #f8f8f8; /* subtle footer background */
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .footer-accreditations p {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .accreditation-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px; /* space between logos */
+      flex-wrap: wrap; /* wraps on smaller screens */
+    }
+    
+    .accreditation-logos img {
+      max-height: 60px;
+      object-fit: contain;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: grayscale(100%);
+    }
+    
+    .accreditation-logos a:hover img {
+      transform: scale(1.1);
+      filter: grayscale(0%); /* color on hover */
     }
