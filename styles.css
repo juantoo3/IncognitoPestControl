@@ -304,9 +304,21 @@
        .contact-wrapper {
          grid-template-columns: 1fr;
        }
-  
+
+      .clients-carousel {
+          overflow-x:auto;
+          -webkit-overflow-scrolling:touch;
+          scroll-snap-type:x mandatory;
+          scroll-behavior:smooth;
+          touch-action:pan-x;
+        }
+        
+        .clients-carousel::-webkit-scrollbar {
+          display: none;
+        }
+      
        .clients-track {
-         animation: scrollClients 15s linear infinite;
+         animation: none;
        }
 
        .service-section{
@@ -552,6 +564,7 @@
     /* =======================
    CLIENTS CAROUSEL
     ======================= */
+    
     .clients-section {
       margin: 80px auto 40px;
       padding: 20px 0;
@@ -566,10 +579,10 @@
     }
     
     .clients-carousel {
-       width: 100%;
-       overflow: hidden;
-       position: relative;
-     }
+      width: 100%;
+      overflow-x: hidden;
+      position: relative;
+    }
      
      .clients-track {
        display: flex;
@@ -585,6 +598,7 @@
       object-fit: contain;
       filter: grayscale(25%);
       transition: filter 0.3s ease, opacity 0.3s ease;
+      scroll-snap-align: center;
     }
     
     .clients-track img:hover {
