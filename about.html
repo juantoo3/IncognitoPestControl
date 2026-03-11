@@ -220,39 +220,65 @@
   </section>
   
   <script>
-    const loader = document.getElementById("loader");
-  
-    // Hide loader normally
-    window.addEventListener("load", () => {
-      setTimeout(() => loader.classList.add("hide"), 300);
+  const loader = document.getElementById("loader");
+
+  // Hide loader normally
+  window.addEventListener("load", () => {
+    setTimeout(() => loader.classList.add("hide"), 300);
+  });
+
+  // Fix browser back/forward cache
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      loader.classList.add("hide");
+    }
+  });
+
+  // Show loader only for internal navigation clicks
+  document.querySelectorAll("a[href]").forEach(link => {
+    link.addEventListener("click", e => {
+      const url = link.getAttribute("href");
+
+      if (
+        url.startsWith("http") ||
+        url.startsWith("#") ||
+        url.startsWith("javascript:") ||
+        link.target === "_blank"
+      ) return;
+
+      e.preventDefault();
+      loader.classList.remove("hide");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
     });
-  
-    // Fix browser back/forward cache
-    window.addEventListener("pageshow", (event) => {
-      if (event.persisted) {
-        loader.classList.add("hide");
+  });
+
+    //navigation
+    const nav = document.getElementById("mainNav");
+    const header = document.querySelector(".header-hero");
+    
+    window.addEventListener("scroll", () => {
+    
+      const trigger = header.offsetHeight;
+    
+      if (window.scrollY > trigger) {
+        nav.classList.add("show");
+      } else {
+        nav.classList.remove("show");
       }
+    
     });
+
+    //mobile nav
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show-menu");
+    });  
   
-    // Show loader only for internal navigation clicks
-    document.querySelectorAll("a[href]").forEach(link => {
-      link.addEventListener("click", e => {
-        const url = link.getAttribute("href");
-  
-        if (
-          url.startsWith("http") ||
-          url.startsWith("#") ||
-          link.target === "_blank"
-        ) return;
-  
-        e.preventDefault();
-        loader.classList.remove("hide");
-  
-        setTimeout(() => {
-          window.location.href = url;
-        }, 300);
-      });
-    });
   </script>
 </body>
 </html>
