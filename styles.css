@@ -691,6 +691,12 @@
       margin: 80px auto 40px;
       padding: 20px 0;
       background: none;
+      text-align: center;
+    }
+
+    .clients-section .cta-btn {
+      display: inline-block;
+      margin-top: 40px;
     }
     
     .clients-title {
