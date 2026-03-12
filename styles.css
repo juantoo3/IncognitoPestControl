@@ -3,7 +3,7 @@
    --primary: #0f2a44;        /* dark blue */
    --primary-light: #1f4f7a;  /* hover blue */
    --text-dark: #1a1a1a;
-   --shadow: rgba(0, 0, 0, 0.1);
+   --shadow: rgba(0, 0, 0, 0.3);
    --overlay-color: rgba(15, 42, 68, 0.75);
  }
 
