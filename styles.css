@@ -495,7 +495,7 @@
       }
 
     /* =======================
-       SERVICES
+       SERVICES CARDS
     ======================== */
 
     .highlight{
@@ -528,8 +528,12 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+    }
+
+	.services-grid a:last-child {
+      grid-column: span 2;
     }
 
     .service-link {
@@ -539,7 +543,7 @@
 
     .service-card {
       position: relative;
-      height: 180px;
+      height: 90px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 18px var(--shadow);
@@ -551,19 +555,31 @@
     .service-card:hover {
       transform: translateY(-6px);
     }
+    
+    .service-title {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+
+      text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+      z-index: 2;
+    }
 
     /* Overlay */
     .service-overlay {
       position: absolute;
       inset: 0;
-      background: var(--overlay-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
+      background: rgba(15, 42, 68, 0.75);
       opacity: 0;
       transition: opacity 0.3s ease;
+      z-index: 1;
     }
 
     .service-card:hover .service-overlay {
@@ -571,10 +587,10 @@
     }
 
     .service-overlay h3 {
-      color: #fff;
+      /*color: white;*/
       font-size: 22px;
-      font-weight: bold;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      font-weight: 700;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.6);
     }
 
     /* =======================
@@ -597,7 +613,7 @@
     }
     
     /* =======================
-       SERVICE PAGES- CONTENT CARD
+       SERVICE PAGES- CONTENT
     ======================= */
     .service-content {
       width: calc(100% - 40px);
@@ -758,11 +774,31 @@
     }
 
     /* Background Images */
-    .front-residential { background-image: url('assets/resi-ban.png'); }
-    .front-commercial { background-image: url('assets/comm-ban.png'); }
-    .front-rodent { background-image: url('assets/rod-ban.png'); }
-    .front-termite { background-image: url('assets/term-ban.png'); }
-    .front-general { background-image: url('assets/gen-ban.png'); }
+    .front-residential { 
+   	  background-image: url('assets/resi-ban.png'); 
+      background-size: cover;
+      background-position: center;
+    }
+    .front-commercial {
+      background-image: url("../assets/commercial-banner.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .front-rodent { 
+      background-image: url('assets/rod-ban.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .front-termite { 
+      background-image: url('assets/term-ban.png'); 
+      background-size: cover;
+      background-position: center;
+    }
+    .front-general { 
+      background-image: url('assets/gen-ban.png'); 
+      background-size: cover;
+      background-position: center;
+    }
 
     /* =======================
        BUTTON
