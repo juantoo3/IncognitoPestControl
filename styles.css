@@ -762,6 +762,7 @@
     .front-commercial { background-image: url('assets/comm-ban.png'); }
     .front-rodent { background-image: url('assets/rod-ban.png'); }
     .front-termite { background-image: url('assets/term-ban.png'); }
+    .front-general { background-image: url('assets/gen-ban.png'); }
 
     /* =======================
        BUTTON
