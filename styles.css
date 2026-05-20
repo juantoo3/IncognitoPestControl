@@ -325,6 +325,18 @@
          animation: none;
        }
 
+		 .social-section{
+	    padding: 70px 20px;
+	  }
+	
+	  .social-header h2{
+	    font-size: 32px;
+	  }
+	
+	  .social-image{
+	    height: 210px;
+	  }
+
        .service-section{
          flex-direction:column;
          gap:20px;
@@ -767,6 +779,191 @@
         transform: translateX(-50%);
       }
     }
+
+	/* =======================
+	   SOCIAL MEDIA SECTION
+	======================= */
+	
+	.social-section{
+	  padding: 90px 20px;
+	  max-width: 1250px;
+	  margin: auto;
+	}
+	
+	.social-header{
+	  text-align: center;
+	  margin-bottom: 50px;
+	}
+	
+	.section-tag{
+	  color: #4474BB;
+	  font-weight: 900;
+	  letter-spacing: 2px;
+	  margin-bottom: 10px;
+	  font-size: 18px;
+	}
+	
+	.social-header h2{
+	  font-size: 42px;
+	  color: #24446A;
+	  margin-bottom: 15px;
+	}
+	
+	.social-header p{
+	  max-width: 700px;
+	  margin: auto;
+	  color: #555;
+	  line-height: 1.7;
+	}
+	
+	/* GRID */
+	
+	.social-grid{
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	  gap: 30px;
+	}
+	
+	/* CARD */
+	
+	.social-card{
+	  background: rgba(255,255,255,0.92);
+	  border-radius: 22px;
+	  overflow: hidden;
+	  text-decoration: none;
+	  color: inherit;
+	  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+	  transition: 0.3s ease;
+	  backdrop-filter: blur(8px);
+	  display: flex;
+	  flex-direction: column;
+	}
+	
+	.social-card:hover{
+	  transform: translateY(-8px);
+	  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+	}
+	
+	/* IMAGE */
+	
+	.social-image{
+	  width: 100%;
+	  height: 230px;
+	  overflow: hidden;
+	}
+	
+	.social-image img{
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  transition: transform 0.4s ease;
+	}
+	
+	.social-card:hover .social-image img{
+	  transform: scale(1.05);
+	}
+	
+	/* CONTENT */
+	
+	.social-content{
+	  padding: 25px;
+	}
+	
+	.social-type{
+	  display: inline-block;
+	  margin-bottom: 14px;
+	  font-size: 14px;
+	  font-weight: 700;
+	  color: #4474BB;
+	  background: #dee9fc;
+	  padding: 6px 12px;
+	  border-radius: 30px;
+	}
+	
+	.social-content h3{
+	  font-size: 24px;
+	  color: #24446A;
+	  margin-bottom: 14px;
+	  line-height: 1.3;
+	}
+	
+	.social-content p{
+	  color: #555;
+	  line-height: 1.7;
+	  margin-bottom: 25px;
+	}
+	
+	.social-link{
+	  font-weight: 700;
+	  color: #4474BB;
+	  transition: 0.3s ease;
+	}
+	
+	.social-card:hover .social-link{
+	  color: #24446A;
+	}
+	
+	/* BUTTON */
+	
+	.social-button-wrap{
+	  text-align: center;
+	  margin-top: 50px;
+	}
+	
+	.social-btn{
+	  display: inline-block;
+	  padding: 15px 34px;
+	  background: #24446A;
+	  color: white;
+	  text-decoration: none;
+	  border-radius: 10px;
+	  font-weight: 700;
+	  transition: 0.3s ease;
+	}
+	
+	.social-btn:hover{
+	  background: #4474BB;
+	  transform: translateY(-2px);
+	}
+
+	/* VIDEO PLAY BUTTON */
+	
+	.play-overlay{
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	
+	  width: 72px;
+	  height: 72px;
+	
+	  border-radius: 50%;
+	  background: rgba(255,255,255,0.92);
+	
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	
+	  font-size: 30px;
+	  color: #24446A;
+	
+	  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+	
+	  transition: 0.3s ease;
+	}
+	
+	/* IMPORTANT */
+	.social-image{
+	  position: relative;
+	}
+	
+	/* Hover effect */
+	
+	.social-card:hover .play-overlay{
+	  transform: translate(-50%, -50%) scale(1.1);
+	  background: #24446A;
+	  color: white;
+	}
 
     .service-card:focus-within .service-overlay,
     .service-card:hover .service-overlay {
